@@ -9,7 +9,7 @@ const apiRoutes = require('./src/routes');
 const PORTSERVER = process.env.PORT || 3000;
 
 //Connecting to database
-mongoose.connect(process.env.DATABASE, {
+mongoose.connect("mongodb://127.0.0.1:27017/olx", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -30,5 +30,5 @@ server.use(express.static(__dirname+'/public'));
 server.use('/', apiRoutes);
 
 server.listen(process.env.PORTSERVER, () => {
-  console.log(`- Rodando no endereço: ${process.env.BASEURL}`);
+  console.log(`- Rodando no endereço: http://localhost:5000`);
 })
