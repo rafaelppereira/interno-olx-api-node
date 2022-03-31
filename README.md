@@ -1,0 +1,34 @@
+users
+
+- \_id
+- name
+- email
+- state
+- passwordHash
+- token
+
+states
+
+- \_id
+- name
+
+categories
+
+- \_id
+- name
+- slug
+
+ads
+
+- \_id
+- idUser
+- state
+- category
+- images [{url, default: true | false}]
+- dateCreated
+- title
+- price
+- priceNegotiable: true
+- description
+- views
+- status
